@@ -1,10 +1,10 @@
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
-import Logo from '../../img/LogoWeb.jpg';
+import Logo from '../../img/logo.png';
 import './Custom.css';
 
 
@@ -27,11 +27,20 @@ function Login() {
         <Row className="vh-100 d-flex align-items-center justify-content-center">
 
             <Col xs={6} className='form-Login'>
-
-              {/* Coluna header */}
               <Row className="justify-content-center">
                 <Col xs={12} sm={4} md={10} lg={10} className="text-center">
-                    <img src={Logo} alt="logo"/>
+                    <img src={Logo} alt="logo" className='imgteste'/>
+                </Col>
+              </Row>
+            </Col>
+
+            <Col xs={3} className='form-Login'>
+
+              {/* Coluna header */}
+              
+              <Row className="justify-content-center">
+                <Col xs={12} sm={4} md={10} lg={10} className="text-center">
+                    <h1>Login</h1>
                 </Col>
               </Row>
 
