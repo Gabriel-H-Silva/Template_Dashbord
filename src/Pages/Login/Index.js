@@ -30,12 +30,12 @@ function Login() {
     try{
       
       // post para api 
-      const response = await api.post('api/auth/v1/login', data);
+      //const response = await api.post('api/auth/v1/login', data);
 
-      localStorage.setItem('Name', Name);
-      localStorage.setItem('accessToken', response.data.accessToken);
-      localStorage.setItem('refreshToken', response.data.refreshToken);
-      localStorage.setItem('authenticated', response.data.authenticated);
+      //localStorage.setItem('Name', Name);
+      //localStorage.setItem('accessToken', response.data.accessToken);
+      //localStorage.setItem('refreshToken', response.data.refreshToken);
+      //localStorage.setItem('authenticated', response.data.authenticated);
       
       navigate("/Home");
     }
