@@ -6,37 +6,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import Logo from '../../img/LogoWeb.jpg';
 import './Custom.css';
-import api from '../../Services/api';
 
 
 function Login() {
   const navigate = useNavigate();
   
-  // Variaveis para armazenar os dados para autenticação para o form
-  const [Name, setUserName] = useState(''); 
-  const [Password, setPassword] = useState('');
-
-  // Função para enviar os dados para API
   async function login(e){
-    e.preventDefault();
- 
-    // data para preencher o json para enviar para api 
-    const data = {
-      Name,
-      Password
-    }
-
-    // tentativa de autenticação
-    try{
-      
-      // post para api 
-      //const response = await api.post('api/auth/v1/login', data);
-
-      //localStorage.setItem('Name', Name);
-      //localStorage.setItem('accessToken', response.data.accessToken);
-      //localStorage.setItem('refreshToken', response.data.refreshToken);
-      //localStorage.setItem('authenticated', response.data.authenticated);
-      
+    try{  
       navigate("/Home");
     }
     catch (error){
@@ -69,12 +45,12 @@ function Login() {
 
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Usuario</Form.Label>
-                        <Form.Control className='custom_Input' type="Usuario" placeholder="Usuario" value={Name} onChange={e => setUserName(e.target.value)} />
+                        <Form.Control className='custom_Input' type="Usuario" placeholder="Usuario" />
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Senha</Form.Label>
-                        <Form.Control type="password" className='custom_Input' placeholder="Senha" value={Password} onChange={e => setPassword(e.target.value)} />
+                        <Form.Control type="password" className='custom_Input' placeholder="Senha" />
                       </Form.Group>
 
                       {/* Botão de enviar */}
